@@ -1,7 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import ApolloClient from "apollo-boost";
+
+import { LandingPage } from "./pages/LandingPage";
+
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -9,7 +12,6 @@ const client = new ApolloClient({
 });
 
 
-import "./App.css";
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
       <Router>
         <>
           <Routes>
-            <Route />
+            <Route path="/" element={<LandingPage />} />
           </Routes>
         </>
       </Router>
