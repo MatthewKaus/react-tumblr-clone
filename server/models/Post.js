@@ -1,8 +1,22 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model, Types } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const Post = new Schema (
+// needs reaction for hearts and comments
+
+const PostSchema = new Schema(
     {
-        
+        title: {
+            type: String,
+            required: true
+        },
+        body: {
+            type: String,
+            required: true
+        },
+        image: {
+            type: String
+        }
     }
 )
+
+module.exports = PostSchema;
