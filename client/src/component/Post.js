@@ -1,6 +1,13 @@
 import React from "react";
 
 const Post = () => {
+  const data = [
+    {
+      image: "https://placeimg.com/400/225/arch",
+      title: "Shoes!",
+    },
+  ];
+
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">

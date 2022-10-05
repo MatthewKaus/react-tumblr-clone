@@ -1,8 +1,6 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const PostSchema = require('./Post')
-
 const UserSchema = new Schema(
   {
     username: {
@@ -20,15 +18,7 @@ const UserSchema = new Schema(
       type: String,
       required: true,
     },
-    firstname: {
-      type: String,
-      required: true,
-    },
-    lastname: {
-      type: String,
-      required: true
-    },
-    posts: [PostSchema]
+    posts: [{ type: Schema.Types.ObjectId, references: "Post" }],
   },
   {
     toJSON: {
@@ -52,8 +42,8 @@ UserSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // when we query a user, we'll also get another field called `stockCount` with the number of saved stocks we have
-UserSchema.virtual('postCount').get(function () {
-    return this.posts.length;
+UserSchema.virtual("postCount").get(function () {
+  return this.posts.length;
 });
 
 const User = model("User", UserSchema);

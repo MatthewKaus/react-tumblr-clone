@@ -1,5 +1,5 @@
 {
-  "name": "tumblr-clone",
+  "name": "example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^7.4.0",
     "if-env": "^1.0.4"
+  },
+  "devDependencies": {    
+    "concurrently": "^7.4.0"
   }
 }
