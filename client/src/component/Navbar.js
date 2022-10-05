@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+
+
+
 
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
       {/*Shows on large*/}
       <div className="navbar-start hidden lg:flex">
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="btn btn-ghost normal-case text-xl"><span className="text-primary">Neo</span >Xperience</a>
         <div className="form-control">
           <input
             type="text"
@@ -49,7 +52,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-center lg:hidden">
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="btn btn-ghost normal-case text-xl"><span className="text-primary">Neo</span >Xperience</a>
       </div>
 
       <div className="navbar-end lg:hidden">

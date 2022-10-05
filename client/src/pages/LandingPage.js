@@ -12,6 +12,8 @@ export const LandingPage = () => {
         <div className="flex-col justify-center ">
           <Post />
           <Post />
+          <Post />
+          <Post />
         </div>
       </div>
     </div>
