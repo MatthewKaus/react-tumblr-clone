@@ -5,6 +5,10 @@ const Post = () => {
     {
       image: "https://placeimg.com/400/225/arch",
       title: "Shoes!",
+      body: "If a dog chews shoes whose shoes does he choose?",
+      tags: [{
+
+      }]
     },
   ];
 

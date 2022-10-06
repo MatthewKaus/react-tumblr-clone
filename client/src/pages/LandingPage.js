@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../component/Navbar";
-import Navbartest from "../component/Navbartest";
-import Post from "../component/Post";
+import Navbar from "../components/Navbar";
+import Navbartest from "../components/Navbartest";
+import Post from "../components/Post";
 
 export const LandingPage = () => {
   return (
@@ -10,8 +10,6 @@ export const LandingPage = () => {
       {/* <Navbartest /> */}
       <div className="flex justify-center">
         <div className="flex-col justify-center ">
-          <Post />
-          <Post />
           <Post />
           <Post />
         </div>
